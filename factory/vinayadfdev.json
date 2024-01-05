@@ -1,0 +1,9 @@
+{
+	"name": "vinayadfdev",
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "e741d056-7656-43e2-83d6-87e25b159af7",
+		"tenantId": "44466a3e-d875-489a-8a63-1178abb3dba2"
+	}
+}

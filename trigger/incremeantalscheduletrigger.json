@@ -1,0 +1,44 @@
+{
+	"name": "incremeantalscheduletrigger",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "Incremental pipeline",
+					"type": "PipelineReference"
+				},
+				"parameters": {
+					"Table_list": [
+						{
+							"TABLESCHEMA": "dbo",
+							"TABLENAME": "iplteams",
+							"watermark_column": "last_updated"
+						},
+						{
+							"TABLESCHEMA": "dbo",
+							"TABLENAME": "employees",
+							"watermark_column": "last_updated"
+						},
+						{
+							"TABLESCHEMA": "dbo",
+							"TABLENAME": "salesitems",
+							"watermark_column": "last_updated"
+						}
+					]
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Hour",
+				"interval": 24,
+				"startTime": "2024-01-04T19:44:00",
+				"endTime": "2024-01-05T13:59:00",
+				"timeZone": "India Standard Time"
+			}
+		}
+	}
+}
